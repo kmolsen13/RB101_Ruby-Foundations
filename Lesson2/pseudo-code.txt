@@ -1,0 +1,36 @@
+1.  - ask the user for the first integer
+    - get the first integer
+    - ask the user for the second integer
+    - get the second integer
+    - add the two integers together and assign the sum to a variable
+    - print the variable
+    
+    
+2.  - create an empty new array
+    - iterate through the array of strings
+    - on each iteration add the current string to a new array
+    - print the new array
+
+
+3.  - create an empty new array
+    - iterate through the array of integers with an index number + 1
+    - use a conditional statement to determine when the index is odd
+    - if the index is odd, add the corresponding integer to the new array 
+    - print the new array
+
+
+4.  - get a character from the user  
+    - create a counter
+    - iterate through the array of characters with index number
+    - at each occurrence of the given character increment the counter
+    - use a conditional statement to determine when the third occurrence of the character is
+    - if the counter hits three, return the index number
+    - if the counter doesn't hit three, return nil
+    
+  
+5.  - create an empty new array
+    - determine the combined length of the two arrays
+    - iterate through the numbers up to the length of the two arrays with an index
+    - if the index + 1 is odd, use the number from the first array and if the index is odd use the number from the second array
+    - add the numbers to the new array
+    - print the new array

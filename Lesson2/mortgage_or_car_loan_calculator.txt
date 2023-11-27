@@ -1,0 +1,9 @@
+> print a welcome message
+> print a message requesting a loan amount
+> create an input for the loan amount
+> print a message requesting an APR
+> create an input for the APR amount
+> print a message requesting the loan duration
+> create an input for the loan duration
+
+

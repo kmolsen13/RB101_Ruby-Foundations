@@ -1,0 +1,23 @@
+> Pass by value means passing a copy of a variable into a method
+  - Method doesn't mutate the original
+
+def change_name(name)
+  name = 'bob'      # does this reassignment change the object outside the method?
+end
+
+name = 'jim'
+change_name(name)
+puts name           # => jim
+
+
+
+> Pass by reference means passing the original variable into a method
+  - Method mutates the original
+
+def cap(str)
+  str.capitalize!   # does this affect the object outside the method?
+end
+
+name = "jim"
+cap(name)
+puts name           # => Jim

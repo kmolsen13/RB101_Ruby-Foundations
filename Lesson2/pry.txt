@@ -1,0 +1,26 @@
+#Installing pry
+gem install pry
+
+
+
+
+
+#Using pry
+
+require "pry" #add this to use Pry
+
+counter = 0
+
+loop do
+  counter += 1
+  break if counter == 1
+  binding.pry                  <= #this creates a breakpoint
+end
+
+
+#When you want to see the value of a variable, simply type it into the prompt space given
+
+
+
+#Exiting pry
+exit-program

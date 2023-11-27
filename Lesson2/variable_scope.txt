@@ -1,0 +1,97 @@
+> Where a variable is initialized determines its scope
+
+a = 1           # first level variable
+
+loop do         # second level
+  b = 2
+
+  loop do       # third level
+    c = 3
+    puts a      # => 1
+    puts b      # => 2
+    puts c      # => 3
+    break
+  end
+
+  puts a        # => 1
+  puts b        # => 2
+  puts c        # => NameError
+  break
+end
+
+puts a          # => 1
+puts b          # => NameError
+puts c          # => NameError
+
+> Variable shadowing: prevents access to outer scope local variable and changing these variables:
+
+Example 1
+n = 10
+
+[1, 2, 3].each do |n|
+  puts n
+end
+
+Example 2
+n = 10
+
+1.times do |n|
+  n = 11
+end
+
+puts n          # => 10
+
+
+> Methods can only access variables that were initialized inside the method or that are defined as parameters
+
+Example 1
+a = 'hi'
+
+def some_method
+  puts a
+end
+
+# invoke the method
+some_method     # => NameError: undefined local variable or method `a' for main:Object
+
+
+Example 2
+def some_method(a)
+  puts a
+end
+
+some_method(5)  # => 5
+
+
+> Constants have a different set of rules. They act like global variables:
+
+Example 1
+USERNAME = 'Batman'
+
+def authenticate
+  puts "Logging in #{USERNAME}"
+end
+
+authenticate    # => Logging in Batman
+
+
+Example 2
+FAVORITE_COLOR = 'taupe'
+
+1.times do
+  puts "I love #{FAVORITE_COLOR}!"  # => I love taupe!
+end
+
+
+Example 3
+loop do
+  MY_TEAM = "Phoenix Suns"
+  break
+end
+
+puts MY_TEAM    # => Phoenix Suns
+
+
+> A block is a method invocation followed by curly braces or do..end
+
+

@@ -1,0 +1,19 @@
+Naming things
+> Make names descriptive and readable. Don't try to save on characters.
+
+
+Methods
+> Make methods short: around 10 lines or so. If it's more than 15 lines, split into 2-3 methods
+> Don't both display output and return a meaningful value (Ruby always returns something, but
+  if it is meaningful, don't also output something)
+> Methods should be at the same level of abstraction. The first three methods below do this: 
+  - deal()
+  - hit()
+  - stay()
+  - iterate_through_car    <= this method is at a different level of abstraction: how vs. what
+> Method names should reflect mutation (update_total)
+> Methods that display things should be named to indicate this: e.g. print_x, display_x
+> get_ace(cards) rather than get_ace_from_cards(cards). The latter will make a reader think there are other ways to get an ace
+> Don't mutate a collection while iterating through it
+  - You can mutate the elements in a collection while interating, but not the collection itself
+> Don't use assignment in a conditional
