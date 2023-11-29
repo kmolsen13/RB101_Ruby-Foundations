@@ -9,16 +9,16 @@ def logic(player, computer)
     (player == 'scissors' && (computer == 'rock' || computer == 'spock')) ||
     (player == 'spock' && (computer == 'paper' || computer == 'lizard')) ||
     (player == 'lizard' && (computer == 'rock' || computer == 'scissors'))
-    return 'computer'
+    'computer'
   elsif (player == 'rock' && (computer == 'scissors' || computer == 'lizard')) ||
     (player == 'paper' && (computer == 'rock' || computer == 'spock')) ||
     (player == 'scissors' && (computer == 'paper' || computer == 'lizard')) ||
     (player == 'spock' && (computer == 'rock' || computer == 'scissors')) ||
     (player == 'lizard' && (computer == 'spock' || computer == 'paper'))
-    return 'player'
+    'player'
   else
     puts 'You draw this round!'
-    return 'draw'
+    'draw'
   end
 end
 
